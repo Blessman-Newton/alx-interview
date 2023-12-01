@@ -1,0 +1,1 @@
+This function initializes Pascal's Triangle with the first row [1] and then iteratively calculates each subsequent row based on the previous row. The result is a list of lists representing Pascal's Triangle up to the specified row n.
