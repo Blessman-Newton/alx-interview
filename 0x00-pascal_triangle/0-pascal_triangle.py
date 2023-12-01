@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+
+"""
+0. Pascal's Triangle
+"""
+
 def pascal_triangle(n):
     if n <= 0:
         return []
@@ -13,3 +19,9 @@ def pascal_triangle(n):
         
         
     return triangle
+
+# Example usage:
+n = 5
+result = pascal_triangle(n)
+for row in result:
+    print(row)
