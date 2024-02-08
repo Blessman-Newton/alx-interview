@@ -1,0 +1,182 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "pascal_triangle",
+        "kind": 2,
+        "importPath": "0x00-pascal_triangle.0-pascal_triangle",
+        "description": "0x00-pascal_triangle.0-pascal_triangle",
+        "peekOfCode": "def pascal_triangle(n):\n    \"\"\"Create a function def pascal_triangle(n): that returns a list of lists\n    of integers representing the Pascal’s triangle of n\n    \"\"\"\n    triangle = []\n    if n > 0:\n        for i in range(1, n + 1):\n            level = []\n            row = 1\n            for j in range(1, i + 1):",
+        "detail": "0x00-pascal_triangle.0-pascal_triangle",
+        "documentation": {}
+    },
+    {
+        "label": "look_next_opened_box",
+        "kind": 2,
+        "importPath": "0x01-lockboxes.0-lockboxes",
+        "description": "0x01-lockboxes.0-lockboxes",
+        "peekOfCode": "def look_next_opened_box(opened_boxes):\n    \"\"\"Looks for the next opened box\n    Args:\n        opened_boxes (dict): Dictionary which contains boxes already opened\n    Returns:\n        list: List with the keys contained in the opened box\n    \"\"\"\n    for index, box in opened_boxes.items():\n        if box.get('status') == 'opened':\n            box['status'] = 'opened/checked'",
+        "detail": "0x01-lockboxes.0-lockboxes",
+        "documentation": {}
+    },
+    {
+        "label": "canUnlockAll",
+        "kind": 2,
+        "importPath": "0x01-lockboxes.0-lockboxes",
+        "description": "0x01-lockboxes.0-lockboxes",
+        "peekOfCode": "def canUnlockAll(boxes):\n    \"\"\"Check if all boxes can be opened\n    Args:\n        boxes (list): List which contain all the boxes with the keys\n    Returns:\n        bool: True if all boxes can be opened, otherwise, False\n    \"\"\"\n    if len(boxes) <= 1 or boxes == [[]]:\n        return True\n    aux = {}",
+        "detail": "0x01-lockboxes.0-lockboxes",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "0x01-lockboxes.0-lockboxes",
+        "description": "0x01-lockboxes.0-lockboxes",
+        "peekOfCode": "def main():\n    \"\"\"Entry point\"\"\"\n    canUnlockAll([[]])\nif __name__ == '__main__':\n    main()",
+        "detail": "0x01-lockboxes.0-lockboxes",
+        "documentation": {}
+    },
+    {
+        "label": "minOperations",
+        "kind": 2,
+        "importPath": "0x02-minimum_operations.0-minoperations",
+        "description": "0x02-minimum_operations.0-minoperations",
+        "peekOfCode": "def minOperations(n: int) -> int:\n    \"\"\" Minimum Operations needed to get n H characters \"\"\"\n    next = 'H'\n    body = 'H'\n    op = 0\n    while (len(body) < n):\n        if n % len(body) == 0:\n            op += 2\n            next = body\n            body += body",
+        "detail": "0x02-minimum_operations.0-minoperations",
+        "documentation": {}
+    },
+    {
+        "label": "minOperations",
+        "kind": 5,
+        "importPath": "0x02-minimum_operations.main",
+        "description": "0x02-minimum_operations.main",
+        "peekOfCode": "minOperations = __import__('0-minoperations').minOperations\nn = 4\nprint(\"Min # of operations to reach {} char: {}\".format(n, minOperations(n)))\nn = 12\nprint(\"Min # of operations to reach {} char: {}\".format(n, minOperations(n)))",
+        "detail": "0x02-minimum_operations.main",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "0x02-minimum_operations.main",
+        "description": "0x02-minimum_operations.main",
+        "peekOfCode": "n = 4\nprint(\"Min # of operations to reach {} char: {}\".format(n, minOperations(n)))\nn = 12\nprint(\"Min # of operations to reach {} char: {}\".format(n, minOperations(n)))",
+        "detail": "0x02-minimum_operations.main",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "0x02-minimum_operations.main",
+        "description": "0x02-minimum_operations.main",
+        "peekOfCode": "n = 12\nprint(\"Min # of operations to reach {} char: {}\".format(n, minOperations(n)))",
+        "detail": "0x02-minimum_operations.main",
+        "documentation": {}
+    },
+    {
+        "label": "validUTF8",
+        "kind": 2,
+        "importPath": "0x04-utf8_validation.0-validate_utf8",
+        "description": "0x04-utf8_validation.0-validate_utf8",
+        "peekOfCode": "def validUTF8(data):\n    \"\"\"Checks if a list of integers are valid UTF-8 codepoints.\n    See <https://datatracker.ietf.org/doc/html/rfc3629#page-4>\n    \"\"\"\n    skip = 0\n    n = len(data)\n    for i in range(n):\n        if skip > 0:\n            skip -= 1\n            continue",
+        "detail": "0x04-utf8_validation.0-validate_utf8",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "kind": 2,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "def get_input():\n    \"\"\"Retrieves and validates this program's argument.\n    Returns:\n        int: The size of the chessboard.\n    \"\"\"\n    global n\n    n = 0\n    if len(sys.argv) != 2:\n        print(\"Usage: nqueens N\")\n        sys.exit(1)",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "is_attacking",
+        "kind": 2,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "def is_attacking(pos0, pos1):\n    \"\"\"Checks if the positions of two queens are in an attacking mode.\n    Args:\n        pos0 (list or tuple): The first queen's position.\n        pos1 (list or tuple): The second queen's position.\n    Returns:\n        bool: True if the queens are in an attacking position else False.\n    \"\"\"\n    if (pos0[0] == pos1[0]) or (pos0[1] == pos1[1]):\n        return True",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "group_exists",
+        "kind": 2,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "def group_exists(group):\n    \"\"\"Checks if a group exists in the list of solutions.\n    Args:\n        group (list of integers): A group of possible positions.\n    Returns:\n        bool: True if it exists, otherwise False.\n    \"\"\"\n    global solutions\n    for stn in solutions:\n        i = 0",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "build_solution",
+        "kind": 2,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "def build_solution(row, group):\n    \"\"\"Builds a solution for the n queens problem.\n    Args:\n        row (int): The current row in the chessboard.\n        group (list of lists of integers): The group of valid positions.\n    \"\"\"\n    global solutions\n    global n\n    if row == n:\n        tmp0 = group.copy()",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "get_solutions",
+        "kind": 2,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "def get_solutions():\n    \"\"\"Gets the solutions for the given chessboard size.\n    \"\"\"\n    global pos, n\n    pos = list(map(lambda x: [x // n, x % n], range(n ** 2)))\n    a = 0\n    group = []\n    build_solution(a, group)\nn = get_input()\nget_solutions()",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "solutions",
+        "kind": 5,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "solutions = []\n\"\"\"The list of possible solutions to the N queens problem.\n\"\"\"\nn = 0\n\"\"\"The size of the chessboard.\n\"\"\"\npos = None\n\"\"\"The list of possible positions on the chessboard.\n\"\"\"\ndef get_input():",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "n = 0\n\"\"\"The size of the chessboard.\n\"\"\"\npos = None\n\"\"\"The list of possible positions on the chessboard.\n\"\"\"\ndef get_input():\n    \"\"\"Retrieves and validates this program's argument.\n    Returns:\n        int: The size of the chessboard.",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "pos",
+        "kind": 5,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "pos = None\n\"\"\"The list of possible positions on the chessboard.\n\"\"\"\ndef get_input():\n    \"\"\"Retrieves and validates this program's argument.\n    Returns:\n        int: The size of the chessboard.\n    \"\"\"\n    global n\n    n = 0",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "0x05-nqueens.0-nqueens",
+        "description": "0x05-nqueens.0-nqueens",
+        "peekOfCode": "n = get_input()\nget_solutions()\nfor solution in solutions:\n    print(solution)",
+        "detail": "0x05-nqueens.0-nqueens",
+        "documentation": {}
+    },
+    {
+        "label": "makeChange",
+        "kind": 2,
+        "importPath": "0x08-making_change.0-making_change",
+        "description": "0x08-making_change.0-making_change",
+        "peekOfCode": "def makeChange(coins, total):\n    \"\"\" Generate changes needed to reach total\n    Args:\n        coins ([List]): [List of Coins available]\n        total ([int]): [total amount needed]\n    \"\"\"\n    if total <= 0:\n        return 0\n    check = 0\n    temp = 0",
+        "detail": "0x08-making_change.0-making_change",
+        "documentation": {}
+    }
+]
